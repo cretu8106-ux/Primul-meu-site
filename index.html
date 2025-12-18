@@ -9,25 +9,23 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden; /* Împiedică scroll-ul paginii întregi */
-            background: #2d5a27; /* Culoarea "copertii" din spate */
+            overflow: hidden;
+            background: #2d5a27;
             font-family: 'Segoe UI', serif;
         }
 
-        /* Containerul principal de răsfoire */
         .carte-container {
             display: flex;
             overflow-x: auto;
-            scroll-snap-type: x mandatory; /* Efectul de "magnet" pentru pagini */
+            scroll-snap-type: x mandatory;
             height: 100vh;
-            scrollbar-width: none; /* Ascunde bara de scroll pe Firefox */
+            scrollbar-width: none;
         }
         
         .carte-container::-webkit-scrollbar {
-            display: none; /* Ascunde bara de scroll pe Chrome/Safari */
+            display: none;
         }
 
-        /* Stilul fiecărei pagini */
         .pagina {
             flex: 0 0 100vw;
             height: 100vh;
@@ -38,7 +36,6 @@
             background: linear-gradient(135deg, #fceeb5 0%, #a8e063 100%);
         }
 
-        /* Cardul alb care imită foaia de hârtie */
         .foaie {
             background: white;
             width: 85%;
@@ -47,7 +44,7 @@
             padding: 20px;
             box-shadow: 10px 0 30px rgba(0,0,0,0.3);
             border-radius: 5px 20px 20px 5px;
-            border-left: 5px solid rgba(0,0,0,0.1); /* Cutea de la mijlocul cărții */
+            border-left: 5px solid rgba(0,0,0,0.1);
             position: relative;
             text-align: center;
         }
@@ -63,7 +60,6 @@
         h2 { color: #1e3d1a; margin-top: 10px; }
         p { color: #444; font-style: italic; }
 
-        /* Indicator mic pentru glisare */
         .instructiune {
             position: absolute;
             bottom: 20px;
