@@ -45,6 +45,35 @@
             font-size: 0.8rem; color: #2d5a27; animation: miscare 2s infinite;
         }
         @keyframes miscare { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-10px); } }
+        /* Stil pentru meniul plutitor */
+.meniu-sus {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Îl pune deasupra tuturor elementelor */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buton-meniu {
+    background: rgba(255, 255, 255, 0.9);
+    color: #2d5a27;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.buton-meniu:hover {
+    background: #2d5a27;
+    color: white;
+}
+
     </style>
 </head>
 <body>
