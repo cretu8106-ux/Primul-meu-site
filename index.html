@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -6,71 +9,42 @@
     <title>Revista Mea Rustică</title>
     <style>
         body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            background: #2d5a27;
-            font-family: 'Segoe UI', serif;
+            margin: 0; padding: 0; height: 100%; overflow: hidden;
+            background: #2d5a27; font-family: 'Segoe UI', serif;
         }
-
         .carte-container {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            height: 100vh;
-            scrollbar-width: none;
+            display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+            height: 100vh; scrollbar-width: none;
         }
-        
         .carte-container::-webkit-scrollbar { display: none; }
-
         .pagina {
-            flex: 0 0 100vw;
-            height: 100vh;
-            scroll-snap-align: start;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            flex: 0 0 100vw; height: 100vh; scroll-snap-align: start;
+            display: flex; justify-content: center; align-items: center;
             background: linear-gradient(135deg, #fceeb5 0%, #a8e063 100%);
         }
-
         .foaie {
-            background: white;
-            width: 85%;
-            max-width: 400px;
-            height: 80%;
-            padding: 20px;
-            box-shadow: 10px 0 30px rgba(0,0,0,0.3);
-            border-radius: 5px 20px 20px 5px;
-            border-left: 5px solid rgba(0,0,0,0.1);
-            position: relative;
-            text-align: center;
+            background: white; width: 85%; max-width: 400px; height: 80%;
+            padding: 20px; box-shadow: 10px 0 30px rgba(0,0,0,0.3);
+            border-radius: 5px 20px 20px 5px; border-left: 5px solid rgba(0,0,0,0.1);
+            position: relative; text-align: center; display: flex; flex-direction: column; justify-content: center;
         }
-
-        img {
-            max-width: 100%;
-            max-height: 60%;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin: 20px 0;
-        }
-
-        h2 { color: #1e3d1a; margin-top: 10px; }
+        img { max-width: 100%; max-height: 50%; border-radius: 10px; margin: 15px 0; }
+        h2 { color: #1e3d1a; margin-top: 0; }
         p { color: #444; font-style: italic; }
+        
+        /* Stil pentru butonul de navigare către altă pagină */
+        .buton-pagina {
+            display: inline-block; margin-top: 20px; padding: 10px 20px;
+            background: #2d5a27; color: white; text-decoration: none;
+            border-radius: 20px; font-weight: bold; transition: 0.3s;
+        }
+        .buton-pagina:hover { background: #1e3d1a; transform: scale(1.05); }
 
         .instructiune {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            font-size: 0.8rem;
-            color: #2d5a27;
-            animation: miscare 2s infinite;
+            position: absolute; bottom: 20px; right: 20px;
+            font-size: 0.8rem; color: #2d5a27; animation: miscare 2s infinite;
         }
-
-        @keyframes miscare {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(-10px); }
-        }
+        @keyframes miscare { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-10px); } }
     </style>
 </head>
 <body>
@@ -80,16 +54,16 @@
         <div class="pagina">
             <div class="foaie">
                 <h2>Brânză de Capră 🌿</h2>
-                <img src="branza.jpg" alt="Branza de capra">
+                <img src="branza.jpg" alt="Branza">
                 <p>Proaspătă, cu roșii cherry dulci.</p>
-                <div class="instructiune">Glisează spre stânga ➔</div>
+                <div class="instructiune">Glisează ➔</div>
             </div>
         </div>
 
         <div class="pagina">
             <div class="foaie">
                 <h2>Lapte Oltenesc</h2>
-                <img src="lapte.jpg" alt="Lapte de capra">
+                <img src="lapte.jpg" alt="Lapte">
                 <p>Tradiție servită pe ie rustică.</p>
             </div>
         </div>
@@ -97,8 +71,9 @@
         <div class="pagina">
             <div class="foaie">
                 <h2>Băutură Naturală</h2>
-                <img src="iaurt.jpg" alt="Iaurt cremos de capra">
+                <img src="iaurt.jpg" alt="Iaurt">
                 <p>Direct din inima naturii.</p>
+                <a href="contact.html" class="buton-pagina">Contactează-ne</a>
             </div>
         </div>
 
@@ -106,5 +81,3 @@
 
 </body>
 </html>
-
-
